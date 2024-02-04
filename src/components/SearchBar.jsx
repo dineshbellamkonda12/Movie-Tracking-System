@@ -5,11 +5,10 @@ export const SearchBar = ( {initialMovies, updateMovies, updateCurrentPage, genr
   function searchMovies() {
     updateCurrentPage(1);
     let filteredMovies = initialMovies.filter((movie) => {
-        // Ensure movie.Title is a string and not undefined
         if (typeof movie.Title === 'string' && typeof searchText === 'string') {
             return movie.Title.toLowerCase().includes(searchText.toLowerCase());
         } else {
-            return false; // Exclude this movie from the filtered results
+            return false;
         }
     });
 

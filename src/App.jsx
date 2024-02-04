@@ -51,14 +51,14 @@ export const App = () => {
   const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
 
   return (
-    <div className='m-3 p-5 d-flex flex-column align-items-center'>
+    <div className='p-5 d-flex flex-column align-items-center bg-white'>
       <h1 className="text-center mb-5">Movie Tracking System</h1>
       <SearchBar initialMovies = {initialMovies} updateMovies={updateMovies} updateCurrentPage= {updateCurrentPage} genreFilter={genreFilter} searchText={searchText} updateSearchText={updateSearchText} />
       <GenreFilter initialMovies = {initialMovies} updateMovies={updateMovies} updateGenreFilter={updateGenreFilter} updateCurrentPage= {updateCurrentPage} genreFilter={genreFilter} />
       <ResetButton initialMovies = {initialMovies} updateMovies={updateMovies} updateSearchText={updateSearchText} updateGenreFilter={updateGenreFilter} />
-      <MoviePagination movies={movies} currentPage={currentPage} moviesPerPage={moviesPerPage} />
+      <MoviePagination movies={movies} currentPage={currentPage} moviesPerPage={moviesPerPage} updateCurrentPage= {updateCurrentPage} />
       <DisplayMovie currentMovies={currentMovies} updateCurrentPage= {updateCurrentPage}/>
-      <MoviePagination movies={movies} currentPage={currentPage} moviesPerPage={moviesPerPage} />
+      <MoviePagination movies={movies} currentPage={currentPage} moviesPerPage={moviesPerPage} updateCurrentPage= {updateCurrentPage}/>
     </div>
   )
 }

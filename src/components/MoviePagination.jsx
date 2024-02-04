@@ -23,7 +23,7 @@ export const MoviePagination = ( {movies, currentPage, moviesPerPage, updateCurr
               </li>
             )}
             {Array.from({ length: Math.ceil(movies.length / moviesPerPage) }).map((_, index) => {
-              if (index < 10 && currentPage <= 7) {
+              if (index < 5 && currentPage <= 5) {
                 return (
                   <li key={index} className='page-item'>
                     <button onClick={() => paginate(index + 1)} className={`page-link ${currentPage === index + 1 ? 'active' : ''}`}>
@@ -31,7 +31,7 @@ export const MoviePagination = ( {movies, currentPage, moviesPerPage, updateCurr
                     </button>
                   </li>
                 );
-              } else if (index >= currentPage - 4 && index <= currentPage + 5) {
+              } else if (index >= currentPage - 3 && index <= currentPage + 1) {
                 return (
                   <li key={index} className='page-item'>
                     <button onClick={() => paginate(index + 1)} className={`page-link ${currentPage === index + 1 ? 'active' : ''}`}>
