@@ -5,9 +5,9 @@ export const DisplayMovie = ( {currentMovies} ) => {
     <>
       <div>    
       <div className='container'>
-        <div className="row mb-5">
-            {currentMovies.map((movie) => (
-                <div key={movie.imdbId} className="col-md-3 mb-4 p-4">
+        <div className="row">
+            {currentMovies.length > 0 ? currentMovies.map((movie) => (
+                <div key={movie.imdbId} className="col-md-3 p-4">
                     <div className="card h-100">
                         <img
                             src={movie.Poster}
@@ -22,7 +22,7 @@ export const DisplayMovie = ( {currentMovies} ) => {
                         </div>
                     </div>
                 </div>
-            ))}
+            )) : <div style={{minWidth: "1300px"}}> <p className="text-center text-dark bg-info p-5">No Results Found</p> </div>}
         </div>
       </div>
       

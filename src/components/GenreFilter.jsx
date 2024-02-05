@@ -2,6 +2,7 @@ import React from 'react';
 
 export const GenreFilter = ( {initialMovies, updateMovies, updateGenreFilter, updateCurrentPage, genreFilter, searchText} ) => {
 
+  //Function to Filter the Genres
   const handleGenreChange = (event) => {
     updateCurrentPage(1);
     const selectedGenre = event.target.value;
@@ -28,8 +29,8 @@ export const GenreFilter = ( {initialMovies, updateMovies, updateGenreFilter, up
 
   return (
     <div>
-        <div className='row mb-3 w-auto'>
-          <div className="col">
+        <div className='row mb-3 justify-content-center'>
+          <div className="col-md-6 col-lg-4">
               <select
                   className="form-select text-center"
                   onChange={handleGenreChange}

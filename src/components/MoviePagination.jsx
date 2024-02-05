@@ -4,9 +4,10 @@ export const MoviePagination = ( {movies, currentPage, moviesPerPage, updateCurr
 
   const paginate = (pageNumber) => updateCurrentPage(pageNumber);
 
+  //Pagination
   return (
     <div>
-        <nav className="pagination-nav d-flex justify-content-center">
+        <nav className="pagination-nav d-flex justify-content-center mt-1">
           <ul className='pagination'>
             {currentPage !== 1 && (
               <li className='page-item'>
@@ -23,7 +24,7 @@ export const MoviePagination = ( {movies, currentPage, moviesPerPage, updateCurr
               </li>
             )}
             {Array.from({ length: Math.ceil(movies.length / moviesPerPage) }).map((_, index) => {
-              if (index < 5 && currentPage <= 5) {
+              if (index < 3 && currentPage <= 3) {
                 return (
                   <li key={index} className='page-item'>
                     <button onClick={() => paginate(index + 1)} className={`page-link ${currentPage === index + 1 ? 'active' : ''}`}>
@@ -31,7 +32,7 @@ export const MoviePagination = ( {movies, currentPage, moviesPerPage, updateCurr
                     </button>
                   </li>
                 );
-              } else if (index >= currentPage - 3 && index <= currentPage + 1) {
+              } else if (index >= currentPage - 3 && index <= currentPage + 5) {
                 return (
                   <li key={index} className='page-item'>
                     <button onClick={() => paginate(index + 1)} className={`page-link ${currentPage === index + 1 ? 'active' : ''}`}>
