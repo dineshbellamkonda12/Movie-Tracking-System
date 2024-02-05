@@ -2,6 +2,8 @@
 
 Movie Tracking System
 
+Please view live version of this website by visiting: https://movie-tracking-system-1.netlify.app/
+
 ## Description
 
 This project aims to develop the front end of an online movie system using ReactJS. Users can search the movie database and, if time allows, filter results based on genre preferences.
