@@ -17,30 +17,30 @@ Git
 
 ## Design Decisions
 
-# User Interface Design:
+### User Interface Design:
 
 The user interface is designed to be intuitive and user-friendly, with a clean layout for the search page.
 I opted for a minimalist design approach to prioritize usability and readability.
 
-# Search Functionality:
+### Search Functionality:
 
 Users can search the movie database by title using a search bar located prominently at the top of the page.
 The search algorithm is optimized to provide fast and relevant results as users type their queries.
 
-# Filter Option:
+### Filter Option:
 
 As a bonus feature, a filter option is provided to refine movie results based on genre preferences.
 Users can select genres from a dropdown menu to narrow down their search results.
 
-# Pagination:
+### Pagination:
 
 Segregated/Divided large amounts of data in to pages using pagination technique.
 
-# Error Handling:
+### Error Handling:
 
 The application handles errors gracefully, providing feedback to users in case of no search results.
 
-# Accessibility:
+### Accessibility:
 
 I have ensured that the application is accessible to users on any screens by implementing proper HTML semantics.
 
