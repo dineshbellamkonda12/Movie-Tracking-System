@@ -9,12 +9,12 @@ export const DisplayMovie = ( {currentMovies} ) => {
             {currentMovies.length > 0 ? currentMovies.map((movie) => (
                 <div key={movie.imdbId} className="col-md-3 p-4">
                     <div className="card h-100">
-                        <img
+                        <a href={movie["Imdb Link"]}><img
                             src={movie.Poster}
                             className="card-img-top img-fluid"
                             alt={movie.Title}
                             style={{ objectFit: 'cover', height: '300px' }}
-                        />
+                        /> </a>
                         <div className="card-body">
                             <h5 className="card-title">{movie.Title}</h5>
                             <p className="card-text">IMDB Score: {movie['IMDB Score']}</p>
