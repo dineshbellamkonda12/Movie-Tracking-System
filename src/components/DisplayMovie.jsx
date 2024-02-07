@@ -4,7 +4,7 @@ export const DisplayMovie = ( {currentMovies} ) => {
   return (
     <>
       <div>    
-      <div className='container'>
+      <div>
         <div className="row">
             {currentMovies.length > 0 ? currentMovies.map((movie) => (
                 <div key={movie.imdbId} className="col-md-3 p-4">
