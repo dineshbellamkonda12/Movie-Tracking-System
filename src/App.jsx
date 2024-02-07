@@ -15,6 +15,7 @@ export const App = () => {
   const [moviesPerPage] = useState(12); // Change the number of movies per page here
   const [genreFilter, setGenreFilter] = useState('');
   const [searchText, setSearchText] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   //Fetching Data from JSON File in Public Folder
   useEffect(() => {
@@ -24,13 +25,24 @@ export const App = () => {
         const data = await response.json();
         setMovies(data);
         setInitialMovies(data); // Save initial movies for reset
+        setIsLoading(false);
       } catch (error) {
         console.error('Error Fetching data:', error);
+        setIsLoading(false);
       }
     }
 
     fetchData();
   }, []);
+
+  //Shows Loading when the results are loading from JSON File
+  if (isLoading) {
+    return (
+      <div className="custom-div-style"> 
+        <p className="text-center text-dark bg-info p-5">Loading......</p>
+      </div>
+    );
+  }
 
   //Call Back Functions
   const updateMovies = (newMovies) => {
@@ -48,6 +60,8 @@ export const App = () => {
   const updateSearchText = (newText) => {
     setSearchText(newText);
   };
+
+
 
   //Pagination Variables
   const indexOfLastMovie = currentPage * moviesPerPage;

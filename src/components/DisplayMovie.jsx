@@ -22,7 +22,7 @@ export const DisplayMovie = ( {currentMovies} ) => {
                         </div>
                     </div>
                 </div>
-            )) : <div style={{minWidth: "1300px"}}> <p className="text-center text-dark bg-info p-5">No Results Found</p> </div>}
+            )) : <div className="custom-div-style"> <p className="text-center text-dark bg-info p-5">No Results Found</p> </div>}
         </div>
       </div>
       

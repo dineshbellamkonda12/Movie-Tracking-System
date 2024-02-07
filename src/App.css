@@ -4,4 +4,11 @@
     background-color: black;
     color: #ffffff;
   }
+
+@media (min-width: 1500px) {
+    .custom-div-style {
+      min-width: 1500px;
+    }
+  }
+  
   
