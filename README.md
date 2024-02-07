@@ -6,7 +6,7 @@ Please view live version of this website by visiting: https://movie-tracking-sys
 
 ## Description
 
-This project aims to develop the front end of an online movie system using ReactJS. Users can search the movie database and, if time allows, filter results based on genre preferences.
+Movie Tracking System helps users to search the movie database and filter results based on genre preferences.
 
 ## Technologies Used:
 
@@ -16,11 +16,6 @@ npm (Node package manager)
 Git
 
 ## Design Decisions
-
-### User Interface Design:
-
-The user interface is designed to be intuitive and user-friendly, with a clean layout for the search page.
-I opted for a minimalist design approach to prioritize usability and readability.
 
 ### Search Functionality:
 
