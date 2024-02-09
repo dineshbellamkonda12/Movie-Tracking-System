@@ -43,7 +43,7 @@ I have ensured that the application is accessible to users on any screens by imp
 
 1. Integration with External Data:
 
-Parsing and integrating the external dataset into the React application required careful handling and validation.
+Parsing and integrating the external dataset into the React application with careful handling and validation.
 
 2. Optimizing Search Performance:
 
